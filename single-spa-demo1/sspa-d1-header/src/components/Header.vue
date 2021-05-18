@@ -1,10 +1,11 @@
 <template>
-  <div class="hello">
+  <div class="header">
     <h1>{{ msg }}</h1>
     <p>
       This is the <code>header</code> SPA that provides links to various places.
     </p>
     <div class="navlinks">
+      <div class="navlink"><a href="/">Root</a></div>
       <div class="navlink"><a href="/home">Home</a></div>
       <div class="navlink"><a href="/testpage">TestPage</a></div>
     </div>
@@ -13,7 +14,7 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "Header",
   props: {
     msg: String,
   },
@@ -21,7 +22,7 @@ export default {
 </script>
 
 <style scoped>
-.hello {
+.header {
   background-color: powderblue;
   padding: 1px 16px 1px 16px;
 }
