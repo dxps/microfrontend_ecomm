@@ -1,6 +1,6 @@
 ## single-spa Demo 1
 
-This demo contains a root config, plus 3 MFE apps: `header`, `home`, and `test-page`.
+This micro frontend (MFE) demo is based on `single-spa` and it contains the root config (application shell in MFE terminology), plus 3 MFE apps: `header`, `home`, and `test-page`.
 
 All four were created using `create-single-spa`.
 
@@ -63,3 +63,10 @@ Steps to test your Vue single-spa application:
 2. Go to http://single-spa-playground.org/playground/instant-test?name=@sspa-d1/sspa-d1-header&url=%2F%2Flocalhost%3A8080%2Fjs%2Fapp.js&framework=vue to see it working!
 ❯
 ```
+
+### Issues
+
+Currently, two issues exist:
+
+1. Routing between the components generates a full page reload.
+2. Sometimes, MFEs are displayed wrongly: Header is always first, then either Home or TestPage is "mounted" below, depending on the route. But sometimes, you may see such result:<br/>![](./docs/mfes_display_order_issue.png)
