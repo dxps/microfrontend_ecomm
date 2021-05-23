@@ -12,20 +12,8 @@ registerApplication({
   activeWhen: ["/"],
 });
 
-// registerApplication({
-//   name: "@single-spa/welcome",
-//   app: () =>
-//     System.import(
-//       "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
-//     ),
-//   activeWhen: ["/"],
-// });
-
-// registerApplication({
-//   name: "@sspa-d2/navbar",
-//   app: () => System.import("@sspa-d2/navbar"),
-//   activeWhen: ["/"]
-// });
+// Before start() is called, applications will be loaded, but not bootstrapped (initialized)/mounted/unmounted.
+// This start() gives you the chance for any preparations and overall performance.
 
 start({
   urlRerouteOnly: true,

@@ -73,8 +73,11 @@
 
 <body>
   <main>
-    <div id="single-spa-application:@sspa-d2/tasks-list"></div>
-    <div id="single-spa-application:@sspa-d2/task-edit"></div>
+    <div style="display: flex; flex-direction: row; justify-content: center;">
+      <div id="single-spa-application:@sspa-d2/tasks-list"></div>
+      <div style="width: 20px;"> </div>
+      <div id="single-spa-application:@sspa-d2/task-edit"></div>
+    </div>
   </main>
   <script>
     System.import('@sspa-d2/root-config');

@@ -21,6 +21,14 @@ const vueLifecycles = singleSpaVue({
   },
 });
 
-export const bootstrap = vueLifecycles.bootstrap;
+// export const bootstrap = vueLifecycles.bootstrap;
+
+export function bootstrap(/*props*/) {
+  return Promise.resolve().then(() => {
+    // One-time initialization code goes here
+    console.log("tasks-list > bootstrapped");
+  });
+}
+
 export const mount = vueLifecycles.mount;
 export const unmount = vueLifecycles.unmount;

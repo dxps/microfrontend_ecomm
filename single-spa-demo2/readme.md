@@ -1,11 +1,29 @@
 ## single-spa Demo 2 > A tasks related showcase
 
+This demo includes two single-spa parcels, displayed horizontally within "/" route.
+
+These two parcels that are loaded as JS modules in the browser at page load time.
+
+```
+ .------------------------------------.
+ |                                    |
+ |      .-------.   .-----------.     |
+ |      | Tasks |   | Task Edit |     |
+ |      '-------'   '-----------'     |
+ |                                    |
+ |                                    |
+ | App Shell (single-spa root config) |
+ '------------------------------------'
+```
+
 ### Run
 
-- start `sspa-d2-shell` using `cd sspa-d2-shell && yarn start`
-- start `sspa-d2-tasks-list` using `cd sspa-d2-tasks-list && && yarn server --port 8081`
-- start `sspa-d2-task-edit` using `cd sspa-d2-task-edit && yarn server --port 8082`
+Two start all three parts - the app shell and the two parcels - use these (as examples using `yarn`):
 
-### Next
+| part                 | run using                |
+| -------------------- | ------------------------ |
+| `sspa-d2-shell`      | `yarn start`             |
+| `sspa-d2-tasks-list` | `yarn serve --port 8081` |
+| `sspa-d2-task-edit`  | `yarn serve --port 8082` |
 
-- [Register the applications](https://single-spa.js.org/docs/getting-started-overview#register-the-application)
+<br/>
