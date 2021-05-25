@@ -15,12 +15,12 @@ const app = {
 
     // Since this example does not use a framework, we use browser DOM apis to create the button
     const button = document.createElement("button");
-    button.textContent = `Your ${props.adjective} microfrontend!`;
+    button.textContent = `Your ${props.adjective} MFE! Click to show the lovely dog`;
     button.addEventListener("click", () => {
-        const image = document.createElement("image");
-        image.src = "https://images.dog.ceo/breeds/finnish-lapphund/mochilamvan.jpg";
-        appElement.appendChild(image);
-    });
+      const image = document.createElement("img");
+      image.setAttribute("src", "https://images.dog.ceo/breeds/finnish-lapphund/mochilamvan.jpg");
+      appElement.appendChild(image);
+  });
 
     // Each single-spa application should append ("mount") to its dom element container
     appElement.appendChild(button);
@@ -29,8 +29,8 @@ const app = {
   // The unmount lifecycle is called every time the application is removed from the DOM.
   async unmount(props) {
     console.log("App is unmounting", props);
-    const domElementContainer = document.getElementById("single-spa-application:vanilla-app");
-    domElementContainer.innerHTML = "";
+    const appElement = document.getElementById("single-spa-application:vanilla-app");
+    appElement.innerHTML = "";
   },
 
 };
@@ -62,12 +62,12 @@ registerApplication({
       //   return 'asdf7sf789sd7f9sd8f9sdfsdf9s'
       // }
     },
-  });
+});
   
 
-  // Before start() is called, single-spa will start loading the applications,
-  // but will not mount them. This is to let you delay mounting until you know
-  // whether the user is logged in, important data is fetched, etc.
-  // An alternative to delaying start() is to have each app wait for those things individually.
-  start();
+// Before start() is called, single-spa will start loading the applications,
+// but will not mount them. This is to let you delay mounting until you know
+// whether the user is logged in, important data is fetched, etc.
+// An alternative to delaying start() is to have each app wait for those things individually.
+start();
 
