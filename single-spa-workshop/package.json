@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack serve",
     "build": "webpack --mode production",
+    "build-analyze": "webpack --analyze --mode production",
     "postinstall": "husky install && ngcc --no-tsconfig --target @angular/core --properties es2015 && ngcc --no-tsconfig --target @angular/platform-browser --properties es2015 && ngcc --no-tsconfig --target @angular/common --properties es2015 && ngcc --no-tsconfig --target @angular/router --properties es2015 && ngcc --no-tsconfig --target @angular/platform-browser --properties es2015",
     "format": "prettier --write ."
   },
